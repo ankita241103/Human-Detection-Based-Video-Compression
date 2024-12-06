@@ -10,6 +10,13 @@ Frames are filtered to retain only those containing human activity or significan
 Retained frames are compressed using the Discrete Wavelet Transform (DWT). Human regions, identified through bounding boxes, are preserved at high quality, while non-human (background) areas are compressed. A binary mask differentiates regions of interest (ROI) from the background. Wavelet decomposition with 'haar' at level 1 reduces background details, achieving efficient compression without significant quality loss. Compressed frames are reassembled and encoded into a video using FFmpeg.
 
 ### Results
-Detection Performance: YOLOv8x achieved 0.88 precision, 0.58 recall, and an F1 score of 0.70 on the VIRAT dataset.
-Compression Evaluation: An average PSNR of 33.72 dB and SSIM of 0.9237 confirm high visual quality retention with reduced file size.
-This approach minimizes storage costs while preserving essential visual details.
+
+##### Human Detection Performance (YOLOv8x)
+Precision: Averaged at 0.88, demonstrating effective reduction of false positives.
+Recall: Averaged at 0.58, indicating some missed detections due to small or distant humans in frames.
+F1 Score: Averaged at 0.70, reflecting a good balance between precision and recall.
+Average IoU: Achieved 0.46, showing acceptable overlap between predicted and ground truth bounding boxes.
+
+##### Video Compression Performance
+PSNR values across all videos exceeded 30 dB, indicating minimal visual degradation between original and compressed frames.
+SSIM values averaged above 0.92, confirming strong preservation of structural details.
