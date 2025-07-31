@@ -1,4 +1,4 @@
-# Human-Detection-Based-Video-Compression
+# Human Detection-Based Video Compression for Storage Optimization in Surveillance Videos
 
 ### Methodology
 The project implements a two-phase methodology for efficient video compression:
